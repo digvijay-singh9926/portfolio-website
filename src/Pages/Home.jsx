@@ -71,7 +71,7 @@ export default function Home() {
           </a>
 
           {/* <a
-            href=""
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -79,7 +79,7 @@ export default function Home() {
           </a> */}
 
           {/* <a
-            href="https://x.com/nishantto23134209"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >

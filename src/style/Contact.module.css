@@ -54,7 +54,7 @@
 }
 } */
 
-.content {
+/* .content {
   width: 100%;
   max-width: 900px;
   margin: 2rem auto;
@@ -63,13 +63,13 @@
   text-align: center;
   color: #f1f5f9;
 
-  /* 🔥 Glass effect */
+  
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
 }
 
-/* Heading */
+
 .heading1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
@@ -84,15 +84,15 @@
   font-weight: 300;
 }
 
-/* Grid layout instead of column */
+
 .contactLinks {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 🔥 2 columns */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 1rem;
   font-family: Playfair Display, serif;
 }
 
-/* Cards */
+
 .contactCard {
   display: flex;
   align-items: center;
@@ -113,12 +113,12 @@
   font-weight: 500;
 }
 
-/* Icon */
+
 .icon {
   font-size: 20px;
 }
 
-/* Hover effect */
+
 .contactCard:hover {
   transform: translateY(-5px) scale(1.02);
   background: linear-gradient(135deg, #ff7e5f, #feb47b);
@@ -126,7 +126,7 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* Glow effect */
+
 .contactCard::before {
   content: "";
   position: absolute;
@@ -140,9 +140,109 @@
   opacity: 1;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   .contactLinks {
     grid-template-columns: 1fr; /* mobile pe single column */
+  /* }
+} */ 
+ .content {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 25px;
+  text-align: center;
+  color: #f1f5f9;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+.heading1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+.contactText {
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+}
+
+/* Grid Layout */
+.contactLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+}
+
+/* Card */
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #f1f5f9;
+
+  padding: 1rem;
+  border-radius: 15px;
+
+  background: rgba(30, 41, 59, 0.7);
+  transition: all 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+}
+
+/* Icon */
+.icon {
+  font-size: 20px;
+}
+
+/* Hover */
+.contactCard:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.contactCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.contactCard:hover::before {
+  opacity: 1;
+}
+
+/* ✅ Mobile Responsive Perfect */
+@media (max-width: 768px) {
+
+  .content {
+    padding: 1.5rem;
   }
+
+  .heading1 {
+    font-size: 2rem;
+  }
+
+  .contactLinks {
+    grid-template-columns: 1fr;   /* 👈 ek card ke niche dusra */
+  }
+
 }

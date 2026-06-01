@@ -116,7 +116,8 @@ export default function Projects() {
               style={{
                 fontFamily: "Playfair Display, serif",
                 fontSize: "26px",
-                marginTop: "8px",
+                marginTop: "10px",
+                marginBottom: "10px",
               }}
             >
               {project.title}
@@ -126,7 +127,8 @@ export default function Projects() {
                 fontFamily: "Playfair Display, serif",
                 textAlign: "justify",
                 fontSize: "16px",
-                marginTop: "-14px",
+                marginTop: "14px",
+                lineHeight: "1.7",
               }}
             >
               {project.description}

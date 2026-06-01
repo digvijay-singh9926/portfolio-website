@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className={styles.four}>
           <a
-            href="digvijay.pdf"
+            href="digvijay (3).pdf"
             download
             className={styles.downloadBtn}
             style={{ fontFamily: "Playfair Display, serif" }}

@@ -1,196 +1,153 @@
 .ContentBody {
+  width: 95%;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: #1e293b;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 2rem auto;
+  background: #1e293b;
   border-radius: 12px;
   padding: 2rem;
-  gap: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 .bodyContainer1 {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
+  flex: 1;
 }
 
 .one {
-  max-width: 33rem;
   font-size: 2rem;
   color: #f99047;
-  line-height: 1.3;
+  margin-bottom: 20px;
 }
 
 .two {
-  font-weight: 900;
-  color: #f8fafc;
   font-size: 2rem;
-  max-width: 90%;
-  line-height: 1.4;
+  color: white;
+  line-height: 1.5;
+  margin-bottom: 20px;
   text-align: justify;
 }
 
 .three {
-  font-size: 1.1rem;
-  text-align: justify;
-  color: #94a3b8;
+  color: #cbd5e1;
   line-height: 1.8;
+  margin-bottom: 25px;
+  text-align: justify;
 }
 
 .four {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
 .downloadBtn,
 .F2 {
   padding: 12px 22px;
-  background-color: #22c55e;
+  background: #22c55e;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: 600;
+  border-radius: 8px;
+}
+/* ========================= */
+/* BUTTON HOVER ONLY */
+/* ========================= */
+
+.downloadBtn,
+.F2 {
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .downloadBtn:hover,
 .F2:hover {
-  background-color: #3730a3;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+    background: linear-gradient(135deg, #4338ca, #6366f1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================= */
+/* SOCIAL ICON HOVER ONLY */
+/* ========================= */
+
+.socialLinksDiv i {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* GitHub hover */
+:global(.fa-github):hover {
+  color: #eab308;
+  transform: translateY(-4px) scale(1.2);
+  text-shadow: 0 0 10px white;
+}
+
+/* LinkedIn hover */
+:global(.fa-linkedin):hover {
+  color: #eab308;
+  transform: translateY(-4px) scale(1.2);
+  text-shadow: 0 0 10px #0a66c2;
 }
 
 .bodyContainer2 {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width: 40%;
   align-items: center;
 }
 
 .pic {
-  width: 330px;
-  height: 330px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #fff;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  border: 5px solid white;
 }
 
 .socialLinksDiv {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  width: 100%;
+  gap: 20px;
 }
 
-.socialLinksDiv a i {
-  font-size: 24px;
-  transition: 0.3s;
-}
-
-.socialLinksDiv a i:hover {
-  color: orange;
-  transform: scale(1.2);
+.socialLinksDiv i {
+  font-size: 28px;
 }
 
 :global(.fa-github) {
-  color: black;
+  color: white;
 }
 
 :global(.fa-linkedin) {
   color: #0077b5;
 }
 
-:global(.fa-instagram) {
-  color: #e4405f;
-}
-
-:global(.fa-twitter) {
-  color: #1da1f2;
-}
-
-/* Tablet */
-
-@media (max-width: 1024px) {
-
-  .ContentBody {
-    flex-direction: column-reverse;
-    text-align: center;
-    padding: 2rem 1.5rem;
-  }
-
-  .bodyContainer1,
-  .bodyContainer2 {
-    width: 100%;
-    align-items: center;
-  }
-
-  .one,
-  .two,
-  .three {
-    max-width: 100%;
-  }
-
-  .three {
-    text-align: center;
-  }
-
-  .four {
-    justify-content: center;
-  }
-
-  .pic {
-    width: 260px;
-    height: 260px;
-  }
-}
-
 /* Mobile */
 
-@media (max-width: 767px) {
-
+@media (max-width: 768px) {
   .ContentBody {
-    padding: 1.5rem 1rem;
-    border-radius: 0;
-    gap: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .bodyContainer2 {
+    order: -1;
   }
 
   .one {
     font-size: 1.5rem;
-    text-align: center;
   }
 
   .two {
     font-size: 1.2rem;
-    text-align: justify;
-    line-height: 1.6;
   }
 
   .three {
     font-size: 0.95rem;
     text-align: justify;
-    line-height: 1.7;
-  }
-
-  .four {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .downloadBtn,
-  .F2 {
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    padding: 12px;
   }
 
   .pic {
@@ -198,11 +155,12 @@
     height: 180px;
   }
 
-  .socialLinksDiv {
-    gap: 1rem;
+  .four {
+    justify-content: center;
   }
 
-  .socialLinksDiv a i {
-    font-size: 20px;
+  .downloadBtn,
+  .F2 {
+    width: 100%;
   }
 }

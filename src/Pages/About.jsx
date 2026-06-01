@@ -62,7 +62,7 @@ export default function About() {
 
         <div className={styles.four}>
           <a
-            href="./digvijay.pdf"
+            href="./digvijay (3).pdf"
             className={styles.downloadBtn}
           >
             {" "}
